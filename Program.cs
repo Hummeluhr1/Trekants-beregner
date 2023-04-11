@@ -6,6 +6,7 @@ namespace Trekants_beregner
     {
         static void Main(string[] args)
         {
+            //jens was here
             //Tegner trekanten 
 
             Console.WriteLine("            B\u00B0               ");
