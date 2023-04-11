@@ -136,10 +136,87 @@ namespace Trekants_beregner
 
                     break;
 
-                case "":
-                
-                default:
-                    break;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                 case "ABc":
                     C = 180 - A - B;
