@@ -8,14 +8,14 @@ namespace Trekants_beregner
         {
             //Tegner trekanten 
 
-            Console.WriteLine("            B\u00B0            ");
-            Console.WriteLine("           /\\                 ");
-            Console.WriteLine("          /  \\                ");
-            Console.WriteLine("         /    \\               ");
-            Console.WriteLine("      c /      \\ a            ");
-            Console.WriteLine("       /        \\             ");
-            Console.WriteLine("      /          \\            ");
-            Console.WriteLine("     /____________\\           ");
+            Console.WriteLine("            B\u00B0               ");
+            Console.WriteLine("           /\\                    ");
+            Console.WriteLine("          /  \\                   ");
+            Console.WriteLine("         /    \\                  ");
+            Console.WriteLine("      c /      \\ a               ");
+            Console.WriteLine("       /        \\                ");
+            Console.WriteLine("      /          \\               ");
+            Console.WriteLine("     /____________\\              ");
             Console.WriteLine("   A\u00B0       b      C\u00B0   ");
 
             //Bruger skriver sine kendte værdier ind
@@ -125,8 +125,18 @@ namespace Trekants_beregner
             {
                 case "abc":
                     A=((b * b + c * c - a * a) / (2 * b * c));
-                    Math.Acos(A);
+                    Console.WriteLine("A =  " + Math.Acos(A)* 180 / Math.PI + "\u00b0"); 
+                    
+                    B= ((a * a + c * c - b * b) / (2 * a * c));
+                    Console.WriteLine("B =  " + Math.Acos(B) * 180 / Math.PI + "\u00b0");
+
+                    C = ((a * a + b * b - c * c) / (2 * a * b));
+                    Console.WriteLine("C =  " + Math.Acos(C) * 180 / Math.PI + "\u00b0");
+
                     break;
+
+                case ""
+                
                 default:
                     break;
             }
