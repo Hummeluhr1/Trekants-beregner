@@ -31,7 +31,7 @@ namespace Trekants_beregner
 
             //Console.WriteLine(sortedStr);
 
-            double A=0, B=0, C=0, a=0, b=0, c = 0;
+            double A = 0, B = 0, C = 0, a = 0, b = 0, c = 0, C2 = 0, B2 = 0, A2 = 0, a2 = 0, b2 = 0, c2 = 0;
 
             switch (charArr[0])
             {
@@ -136,8 +136,77 @@ namespace Trekants_beregner
 
                     break;
 
-                case ""
-                
+                case "Abc":
+
+                    a= (Math.Pow(b, 2) + Math.Pow(c, 2) - 2 * b * c * Math.Cos(A*Math.PI / 180));
+                    a = Math.Sqrt(a);
+                    Console.WriteLine("a =" + a );
+
+                    B= ((a * a + c * c - b * b) / (2 * a * c));
+                    Console.WriteLine("B =  " + (Math.Acos(B) * 180 / Math.PI) + "\u00b0");
+
+                    C = ((a * a + b * b - c * c) / (2 * a * b));
+                    Console.WriteLine("C =  " + Math.Acos(C) * 180 / Math.PI + "\u00b0");
+
+                    break;
+
+                case "Bac":
+
+                    b = (Math.Pow(a, 2) + Math.Pow(c, 2) - 2 * a * c * Math.Cos(B * Math.PI / 180));
+                    b = Math.Sqrt(b);
+                    Console.WriteLine("b = " + b);
+
+
+                    A = ((b * b + c * c - a * a) / (2 * b * c));
+                    Console.WriteLine("A =  " + Math.Acos(A) * 180 / Math.PI + "\u00b0");
+
+                    C = ((a * a + b * b - c * c) / (2 * a * b));
+                    Console.WriteLine("C =  " + Math.Acos(C) * 180 / Math.PI + "\u00b0"); 
+
+                    break;
+
+                case "Cab":
+
+                    c = (Math.Pow(a, 2) + Math.Pow(b, 2) - 2 * a * b * Math.Cos(C * Math.PI / 180));
+                    c = Math.Sqrt(c);
+                    Console.WriteLine("c = " + c);
+
+                    A = ((b * b + c * c - a * a) / (2 * b * c));
+                    Console.WriteLine("A =  " + Math.Acos(A) * 180 / Math.PI + "\u00b0");
+
+                    B = ((a * a + c * c - b * b) / (2 * a * c));
+                    Console.WriteLine("B =  " + (Math.Acos(B) * 180 / Math.PI) + "\u00b0");
+
+                    break;
+
+                case "Aac":
+
+                    Console.WriteLine("Bemærk, din trekant har 2 løsninger!");
+
+                    C = (Math.Asin(c * Math.Sin(A) / a) * (180 / Math.PI));
+                    C2 = 180 - C;
+
+                    B = 180 - C - A;
+                    B2 = 180 - C2 - A;
+
+
+                    b = (Math.Pow(a, 2) + Math.Pow(c, 2) - 2 * a * c * Math.Cos(B * Math.PI / 180));
+                    b = Math.Sqrt(b);
+
+                    b2 = (Math.Pow(a, 2) + Math.Pow(c, 2) - 2 * a * c * Math.Cos(B2 * Math.PI / 180));
+                    b2 = Math.Sqrt(b2);
+
+                    Console.WriteLine("Trekant 1");
+                    Console.WriteLine("C =" + C);
+                    Console.WriteLine("B = " + B);
+                    Console.WriteLine("b = " + b);
+                    Console.WriteLine();
+                    Console.WriteLine("Trekant 2");
+                    Console.WriteLine("C2 =" + C2);
+                    Console.WriteLine("B2 = " + B2);
+                    Console.WriteLine("b2 = " + b2);
+                    break;
+
                 default:
                     break;
             }
