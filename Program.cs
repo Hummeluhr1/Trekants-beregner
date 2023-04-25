@@ -191,11 +191,19 @@ namespace Trekants_beregner
                     } 
                         else
                     {
-                        Console.WriteLine("Bemærk, din trekant har 2 løsninger!"); 
+
+                        if(C2 + A < 180)
+                        {
+                            Console.WriteLine("Bemærk, din trekant har 2 løsninger!");
+
+                        }
+                     
 
 
                         C = (Math.Asin(c * Math.Sin(A * Math.PI / 180) / a) * (180 / Math.PI));
                         C2 = 180 - C;
+
+                 
 
                         B = 180 - C - A;
                         B2 = 180 - C2 - A;
@@ -212,10 +220,14 @@ namespace Trekants_beregner
                         Console.WriteLine("B = " + B);
                         Console.WriteLine("b = " + b);
                         Console.WriteLine();
-                        Console.WriteLine("Trekant 2");
-                        Console.WriteLine("C2 =" + C2);
-                        Console.WriteLine("B2 = " + B2);
-                        Console.WriteLine("b2 = " + b2);
+                        if (C2 + A < 180)
+                        {
+                            Console.WriteLine("Trekant 2");
+                            Console.WriteLine("C2 =" + C2);
+                            Console.WriteLine("B2 = " + B2);
+                            Console.WriteLine("b2 = " + b2);
+                        }
+                      
 
                     }      
                     break;
