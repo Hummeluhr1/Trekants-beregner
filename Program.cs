@@ -218,6 +218,29 @@ namespace Trekants_beregner
 
 
 
+                case "ABa":
+                    C = 180 - A - B;
+                    Console.WriteLine("C = " + C);
+                    b = a / (Math.Sin(A * Math.PI / 180)) * (Math.Sin(B * Math.PI / 180));
+                    Console.WriteLine("b = " + b);
+                    c = a / (Math.Sin(A * Math.PI / 180)) * (Math.Sin(C * Math.PI / 180));
+                    Console.WriteLine("c = " + c);
+
+                    Console.ReadLine();
+                    break;
+
+
+                case "ABb":
+                    C = 180 - A - B;
+                    Console.WriteLine("C = " + C);
+                    a = b / (Math.Sin(B * Math.PI / 180)) * (Math.Sin(A * Math.PI / 180));
+                    Console.WriteLine("a = " + a);
+                    c = b / (Math.Sin(B * Math.PI / 180)) * (Math.Sin(C * Math.PI / 180));
+                    Console.WriteLine("c = " + c);
+
+                    Console.ReadLine();
+                    break; 
+
                 case "ABc":
                     C = 180 - A - B;
                     Console.WriteLine("C = " + C);
@@ -225,8 +248,21 @@ namespace Trekants_beregner
                     Console.WriteLine("a = " + a);
                     b = c / (Math.Sin(C * Math.PI / 180)) * (Math.Sin(B * Math.PI / 180));
                     Console.WriteLine("b = " + b);
+
+                    Console.ReadLine();
                     break;
-                
+
+                case "ACa":
+                    B = 180 - A - C;
+                    Console.WriteLine("B = " + B);
+                    b = a / (Math.Sin(A * Math.PI / 180)) * (Math.Sin(B * Math.PI / 180));
+                    Console.WriteLine("b = " + b);
+                    c = a / (Math.Sin(A * Math.PI / 180)) * (Math.Sin(C * Math.PI / 180));
+                    Console.WriteLine("c = " + c);
+
+                    Console.ReadLine();
+                    break;
+
                 case "ACb":
                     B = 180 - A - C;
                     Console.WriteLine("B = " + B);
@@ -234,6 +270,19 @@ namespace Trekants_beregner
                     Console.WriteLine("a = " + a);
                     c = b / (Math.Sin(B * Math.PI / 180)) * (Math.Sin(C * Math.PI / 180));
                     Console.WriteLine("c = " + c);
+
+                    Console.ReadLine();
+                    break;
+
+                case "ACc":
+                    B = 180 - A - C;
+                    Console.WriteLine("B = " + B);
+                    a = c / (Math.Sin(C * Math.PI / 180)) * (Math.Sin(A * Math.PI / 180));
+                    Console.WriteLine("a = " + a);
+                    b = c / (Math.Sin(C * Math.PI / 180)) * (Math.Sin(B * Math.PI / 180));
+                    Console.WriteLine("b = " + b);
+
+                    Console.ReadLine();
                     break;
 
                 case "BCa":
@@ -243,25 +292,35 @@ namespace Trekants_beregner
                     Console.WriteLine("b = " + b);
                     c = a / (Math.Sin(A * Math.PI / 180)) * (Math.Sin(C * Math.PI / 180));
                     Console.WriteLine("c = " + c);
+
+                    Console.ReadLine();
                     break;
 
-                case "ABa":
-                    C = 180 - A - B;
-                    Console.WriteLine("C = " + C);
-                    b = a / (Math.Sin(A * Math.PI / 180)) * (Math.Sin(B * Math.PI / 180));
-                    Console.WriteLine("b = " + b);
-                    c = a / (Math.Sin(A * Math.PI / 180)) * (Math.Sin(C * Math.PI / 180));
-                    Console.WriteLine("c = " + c);
-                    break;
-
-                case "ABb":
-                    C = 180 - A - B;
-                    Console.WriteLine("C = " + C);
+                case "BCb":
+                    A = 180 - B - C;
+                    Console.WriteLine("A = " + A);
                     a = b / (Math.Sin(B * Math.PI / 180)) * (Math.Sin(A * Math.PI / 180));
                     Console.WriteLine("a = " + a);
                     c = b / (Math.Sin(B * Math.PI / 180)) * (Math.Sin(C * Math.PI / 180));
                     Console.WriteLine("c = " + c);
+
+                    Console.ReadLine();
                     break;
+
+                case "BCc":
+                    A = 180 - B - C;
+                    Console.WriteLine("A = " + A);
+                    a = c / (Math.Sin(C * Math.PI / 180)) * (Math.Sin(A * Math.PI / 180));
+                    Console.WriteLine("a = " + a);
+                    b = c / (Math.Sin(C * Math.PI / 180)) * (Math.Sin(B * Math.PI / 180));
+                    Console.WriteLine("b = " + b);
+
+                    Console.ReadLine();
+                    break;
+
+
+
+
             }
 
         }
